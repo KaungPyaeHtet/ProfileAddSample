@@ -10,11 +10,9 @@ function App() {
     <div className="container border border-primary rounded my-3 p-4">
       <Header />
       <Form profiles={profiles} setProfiles={setProfiles} />
-      {console.log(profiles)}
-      {console.log(profiles.sort((a, b) => b.id - a.id))}
+
       {
       profiles
-        .slice()
         .sort((a, b) => b.id - a.id)
         .map((profile) => {
           return (

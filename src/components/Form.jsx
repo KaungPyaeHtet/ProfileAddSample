@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 const Form = ( {profiles, setProfiles} ) => {
   const [profile, setProfile] = useState({});
   const [id, setId ] = useState(1);
+
   function handleSubmit(e) {
     e.preventDefault();
     const newProfile = {...profile, id}
@@ -12,6 +13,7 @@ const Form = ( {profiles, setProfiles} ) => {
     setProfile({});
     setId((prevId) => (prevId + 1))
   }
+  
   function handleChange(e) {
     setProfile({
       ...profile,
